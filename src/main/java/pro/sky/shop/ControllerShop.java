@@ -2,13 +2,14 @@ package pro.sky.shop;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-
+@RequestMapping(path = "/order")
 public class ControllerShop {
     private ServiceShop serviceShop;
 
@@ -21,7 +22,7 @@ public class ControllerShop {
         return serviceShop.addProduct(id);
     }
 
-    @GetMapping(path = "get")
+    @GetMapping(path = "/get")
     public String get() {
         try {
             return serviceShop.get();
