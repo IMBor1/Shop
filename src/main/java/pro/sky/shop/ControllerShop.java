@@ -15,7 +15,6 @@ public class ControllerShop {
     public ControllerShop(ServiceShop serviceShop) {
         this.serviceShop = serviceShop;
     }
-
     @GetMapping(path = "/add")
     public List<Integer> addProduct(@RequestParam("id") List<Integer> id) {
         return serviceShop.addProduct(id);
