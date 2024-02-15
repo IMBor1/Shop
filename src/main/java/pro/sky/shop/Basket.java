@@ -22,7 +22,6 @@ public class Basket {
         if (items != null) {
             id.addAll(items);
         }
-
         return id;
     }
 }
